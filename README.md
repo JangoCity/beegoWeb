@@ -8,6 +8,7 @@ BeegoSolution 是一个关于 Begoo 的 Go 解决方案。
 - 集成 Swagger
 - 支持热升级
 - 基于dep管理包依赖
+- 支持进程监控
 
 ## 技术栈
 
@@ -45,3 +46,10 @@ $ cd BeegoSolution
 $ bee run
 $ curl http://localhost:8080
 ```
+## 功能地址
+| 功能 | 地址 |  
+| :---- |:----| 
+| 前台 | http://localhost:8080/ | 
+| 后台管理登陆 | http://localhost:8080/admin/login | 
+| 进程监控 | http://localhost:8088/ | 
+
