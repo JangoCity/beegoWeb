@@ -30,8 +30,10 @@ BeegoSolution 是一个关于 Begoo 的 Go 解决方案。
 | 系统目录 | static | css、图片、js目录 | 
 | 系统目录 | test | 单元测试目录 | 
 | 系统目录 | views | 模板目录 | 
-| 自定义目录 | serice | 业务代码目录 | 
 | 自定义目录 | database | 数据库、sql文件目录 | 
+| 自定义目录 | serice | 业务代码目录 | 
+| 自定义目录 | utils | 助手类库 | 
+| 自定义目录 | vendor | dep依赖包目录 | 
 
 ## 使用说明
 ```bash
