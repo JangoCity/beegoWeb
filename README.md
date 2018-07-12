@@ -47,6 +47,7 @@ $ bee run
 $ curl http://localhost:8080
 ```
 ## 功能地址
+
 | 功能 | 地址 |  
 | :---- |:----| 
 | 前台 | http://localhost:8080/ | 
