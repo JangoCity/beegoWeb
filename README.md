@@ -7,7 +7,7 @@ BeegoSolution 是一个关于 Begoo 的 Go 解决方案。
 - 后台管理（用户管理、角色管理、资源管理、权限管理）
 - 集成 Swagger
 - 支持热升级  
-热升级可参考[automatedDeploymentGo](https://github.com/iamwlb/automatedDeploymentGo)
+热升级可参考 [automatedDeploymentGo](https://github.com/iamwlb/automatedDeploymentGo)
 - 基于dep管理包依赖
 - 支持进程监控
 
