@@ -14,6 +14,7 @@ BeegoSolution 是一个关于 Begoo 的 Go 解决方案。
 | :---- |:----| 
 | Go | go1.10.2 | 
 | Beego | 1.9.2 | 
+| dep | v0.4.1 |
 | Metronic | 5.0 | 
 | Swagger | - |
 
