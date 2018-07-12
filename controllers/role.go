@@ -48,12 +48,14 @@ func (c *RoleController) Delete() {
 }
 
 func (c *RoleController) Index() {
-	pageIndex, err := c.GetInt("pageIndex")
-	utils.CheckError(err)
-	pageSize := 10
-	if pageIndex == 0 {
-		pageIndex = 1
+	pageIndex := 1
+	ci := c.Input().Get("pageIndex")
+	if ci != "" {
+		pi, err := strconv.Atoi(ci)
+		utils.CheckError(err)
+		pageIndex = pi
 	}
+	pageSize := 10
 	users, totalCount := service.GetRoles(pageIndex, pageSize)
 	c.Data["PageIndex"] = pageIndex
 	c.Data["PageSize"] = pageSize

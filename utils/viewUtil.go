@@ -2,8 +2,9 @@
 package utils
 
 import (
-	"github.com/astaxie/beego/orm"
 	"strconv"
+
+	"github.com/astaxie/beego/orm"
 )
 
 //获取[]orm.ParamsList中的值，用于模版层，解决模版层使用中括号报错的问题

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>管理后台</title> {{template "common/globalStyle.html" .}}
+<!-- BEGIN PAGE LEVEL STYLES -->
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/bootstrap-fileupload.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/jquery.gritter.css" />
+
+<link rel="stylesheet" type="text/css" href="/static/media/css/chosen.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/select2_metro.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/jquery.tagsinput.css" />
+
+<link rel="stylesheet" type="text/css" href="/static/media/css/clockface.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/bootstrap-wysihtml5.css" />
+
+<link rel="stylesheet" type="text/css" href="/static/media/css/datepicker.css" />
+
+<link rel="stylesheet" type="text/css" href="/static/media/css/timepicker.css" />
+
+<link rel="stylesheet" type="text/css" href="/static/media/css/colorpicker.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/bootstrap-toggle-buttons.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/daterangepicker.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/datetimepicker.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="/static/media/css/multi-select-metro.css" />
+
+<link href="/static/media/css/bootstrap-modal.css" rel="stylesheet"
+	type="text/css" />
+
+<link href="/static/css/simplePagination/simplePagination.css" rel="stylesheet"
+	type="text/css" />
+
+<!-- END PAGE LEVEL STYLES -->
+
+<link rel="shortcut icon" href="/static/media/image/favicon.ico" />
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed">
+
+{{template "common/header.html" .}}
+
+	<!-- BEGIN CONTAINER -->
+
+	<div class="page-container">
+{{template "common/sideBar.html" .}}
+
+		<!-- BEGIN PAGE -->
+
+		<div class="page-content">
+
+			<!-- BEGIN PAGE CONTAINER-->
+
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE HEADER-->
+
+				<div class="row-fluid">
+
+					<div class="span12">
+
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+						<h3 class="page-title">BeegoSolution</h3>
+
+						<ul class="breadcrumb">
+
+							<li><i class="icon-home"></i> <a href="index">Home</a> <i
+								class="icon-angle-right"></i></li>
+
+							<li><a href="list">角色</a></li>
+							<i class="icon-angle-right"></i>
+							<li><a href="list">管理角色</a></li>
+
+						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE HEADER-->
+
+				<div id="dashboard">
+					<!-- BEGIN DASHBOARD STATS -->
+					<div class="row-fluid"></div>
+					<!-- END DASHBOARD STATS -->
+					<div class="row-fluid">
+						<div class="span12">
+							<!-- BEGIN SAMPLE FORM PORTLET-->
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE CONTAINER-->
+
+			</div>
+
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTAINER-->
+
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE CONTENT-->
+
+				<div class="row-fluid">
+
+					<div class="span12">
+
+						<!-- BEGIN EXAMPLE TABLE PORTLET-->
+
+						<div class="portlet box light-grey">
+
+							<div class="portlet-title">
+
+								<div class="caption">
+									<i class="icon-globe"></i>
+								</div>
+
+
+
+							</div>
+
+							<div class="portlet-body">
+
+								<table class="table table-striped table-bordered table-hover"
+									id="sample_1">
+
+									<thead>
+
+										<tr>
+
+											<th>用户名</th>
+											<th>是否基础角色</th>
+											<th>创建时间</th>
+											<th>操作</th>
+
+										</tr>
+
+									</thead>
+									{{range $key, $val := .Entitys}}
+
+									<tbody>
+
+										<tr class="odd gradeX">
+											<td>{{GetParams $val 1}}</td>
+											{{$isBase:=GetParams $val 3}}
+											{{if compare $isBase 1}}
+											<td>是</td>
+											{{else}}
+											<td>否</td>
+											{{end}}
+									
+											
+									<td class="hidden-480">{{GetParams $val 2}}</td>
+											{{if compare $isBase 0}}
+											<td><a href="delete/{{GetParams $val 0}}" class="btn mini black"><i
+													class="icon-trash"></i> Delete</a></td>
+													{{else}}
+													<td></td>
+											{{end}}
+	
+										</tr>
+
+									</tbody>
+									{{end}}
+
+								</table>
+								<div class="pagination-holder clearfix">
+									<div id="compact-pagination"></div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- END EXAMPLE TABLE PORTLET-->
+
+					</div>
+
+				</div>
+				<!-- END PAGE CONTAINER-->
+			</div>
+		</div>
+	</div>
+	<!-- END CONTAINER -->
+
+{{template "common/footer.html" .}}
+
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	
+	{{template "common/coreplugins.html" .}}
+
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+	<script type="text/javascript" src="/static/media/js/ckeditor.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/bootstrap-fileupload.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/chosen.jquery.min.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/select2.min.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/wysihtml5-0.3.0.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/bootstrap-wysihtml5.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/jquery.tagsinput.min.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/jquery.toggle.buttons.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/bootstrap-datepicker.js"></script>
+
+	<script type="text/javascript"
+		src="/static/media/js/bootstrap-datetimepicker.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/clockface.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/date.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/daterangepicker.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/bootstrap-colorpicker.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/bootstrap-timepicker.js"></script>
+
+	<script type="text/javascript"
+		src="/static/media/js/jquery.inputmask.bundle.min.js"></script>
+
+	<script type="text/javascript"
+		src="/static/media/js/jquery.input-ip-address-control-1.0.min.js"></script>
+
+	<script type="text/javascript" src="/static/media/js/jquery.multi-select.js"></script>
+
+	<script src="/static/media/js/bootstrap-modal.js" type="text/javascript"></script>
+
+	<script src="/static/media/js/bootstrap-modalmanager.js"
+		type="text/javascript"></script>
+
+	<!-- END PAGE LEVEL PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+	<script src="/static/media/js/app.js"></script>
+
+	<script src="/static/media/js/form-components.js"></script>
+	<script src="/static/js/simplePagination/jquery.simplePagination.js"></script>
+	<!-- END PAGE LEVEL SCRIPTS -->
+
+	<script>
+		jQuery(document).ready(function() {
+			App.init(); // initlayout and core plugins
+			FormComponents.init();
+
+			var pageIndex = {{.pageIndex}};
+			var pageSize = {{.pageSize}};
+			var totalCount = {{.totalCount}};
+			$('#compact-pagination').pagination({
+				cssStyle : 'compact-theme',
+				displayedPages : 7,
+				items : totalCount,
+				itemsOnPage : pageSize,
+				currentPage : pageIndex,
+				onPageClick : function(page) {
+					changePage(page);
+				}
+			});
+
+		});
+
+		function changePage(page) {
+			window.location = "index?pageIndex=" + page;
+		}
+	</script>
+
+	<!-- END JAVASCRIPTS -->
+</body>
+
+<!-- END BODY -->
+
+</html>

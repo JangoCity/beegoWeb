@@ -23,6 +23,8 @@ func init() {
 	//登录
 	beego.Router("/admin/login", &controllers.AdminController{}, "get:Login")
 	beego.Router("/admin/logindo", &controllers.AdminController{}, "*:Logindo")
+	//退出
+	beego.Router("/admin/logout", &controllers.AdminController{}, "*:Logout")
 	//	后台首页
 	beego.Router("/admin/index", &controllers.AdminController{}, "get:Index")
 	//用户管理

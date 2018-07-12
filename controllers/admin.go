@@ -1,10 +1,9 @@
 package controllers
 
 import (
+	"BeegoSolution/service"
 	"BeegoSolution/utils"
 	"strconv"
-
-	"BeegoSolution/service"
 
 	"github.com/astaxie/beego"
 )
@@ -29,6 +28,11 @@ func (c *AdminController) Logindo() {
 		beego.Info("密码错误")
 		c.TplName = "admin/login.html"
 	}
+}
+
+func (c *AdminController) Logout() {
+	c.DelSession("Adminname")
+	c.Redirect("login", 301)
 }
 
 func (c *AdminController) Index() {
@@ -75,13 +79,14 @@ func (c *AdminController) Delete() {
 }
 
 func (c *AdminController) List() {
-
-	pageIndex, err := c.GetInt("pageIndex")
-	utils.CheckError(err)
-	pageSize := 10
-	if pageIndex == 0 {
-		pageIndex = 1
+	pageIndex := 1
+	ci := c.Input().Get("pageIndex")
+	if ci != "" {
+		pi, err := strconv.Atoi(ci)
+		utils.CheckError(err)
+		pageIndex = pi
 	}
+	pageSize := 10
 	users, totalCount := service.GetAdmins(pageIndex, pageSize)
 	c.Data["PageIndex"] = pageIndex
 	c.Data["PageSize"] = pageSize

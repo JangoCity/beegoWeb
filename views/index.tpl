@@ -75,15 +75,15 @@
 
 <body>
   <header>
-    <h1 class="logo">Welcome to Beego</h1>
+    <h1 class="logo">Welcome to BeegoSolution</h1>
     <div class="description">
-      Beego is a simple & powerful Go web framework which is inspired by tornado and sinatra.
+      BeegoSolution 是一个关于 Begoo 的 Go 解决方案。  
     </div>
   </header>
   <footer>
     <div class="author">
       Official website:
-      <a href="http://{{.Website}}">{{.Website}}</a> /
+      <a href="https://{{.Website}}">{{.Website}}</a> /
       Contact me:
       <a class="email" href="mailto:{{.Email}}">{{.Email}}</a>
     </div>

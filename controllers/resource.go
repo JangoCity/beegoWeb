@@ -53,12 +53,14 @@ func (c *ResourceController) Delete() {
 }
 
 func (c *ResourceController) Index() {
-	pageIndex, err := c.GetInt("pageIndex")
-	utils.CheckError(err)
-	pageSize := 10
-	if pageIndex == 0 {
-		pageIndex = 1
+	pageIndex := 0
+	ci := c.Input().Get("pageIndex")
+	if ci != "" {
+		pi, err := strconv.Atoi(ci)
+		utils.CheckError(err)
+		pageIndex = pi
 	}
+	pageSize := 10
 	users, totalCount := service.GetResources(pageIndex, pageSize)
 	c.Data["PageIndex"] = pageIndex
 	c.Data["PageSize"] = pageSize
