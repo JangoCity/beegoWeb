@@ -1,7 +1,7 @@
 package service
 
 import (
-	"BeegoSolution/utils"
+	"beegoWeb/utils"
 	"fmt"
 	"time"
 

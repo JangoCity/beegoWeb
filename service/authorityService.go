@@ -3,7 +3,7 @@ package service
 import (
 	"github.com/astaxie/beego"
 
-	"BeegoSolution/utils"
+	"beegoWeb/utils"
 	"strconv"
 
 	"github.com/astaxie/beego/orm"

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"BeegoSolution/service"
-	"BeegoSolution/utils"
+	"beegoWeb/service"
+	"beegoWeb/utils"
 	"strconv"
 	"strings"
 

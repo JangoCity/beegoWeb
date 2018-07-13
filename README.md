@@ -1,6 +1,6 @@
 ![beego.png](/static/img/beego.png)
 # BegooSolution
-BeegoSolution 是一个关于 Begoo 的 Go 解决方案。  
+beegoWeb 是一个关于 Begoo 的 Go 语言 Web 解决方案。  
 
 ## 功能特性
 
@@ -42,8 +42,8 @@ BeegoSolution 是一个关于 Begoo 的 Go 解决方案。
 $ go get github.com/astaxie/beego
 $ go get github.com/beego/bee
 $ cd $GOPATH/src/
-$ git clone https://github.com/iamwlb/BeegoSolution.git
-$ cd BeegoSolution
+$ git clone https://github.com/iamwlb/beegoWeb.git
+$ cd beegoWeb
 $ bee run
 $ curl http://localhost:8080
 ```

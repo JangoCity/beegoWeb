@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "BeegoSolution/routers"
-	"BeegoSolution/service"
-	"BeegoSolution/utils"
+	_ "beegoWeb/routers"
+	"beegoWeb/service"
+	"beegoWeb/utils"
 	"fmt"
 
 	"github.com/astaxie/beego"

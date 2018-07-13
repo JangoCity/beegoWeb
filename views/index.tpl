@@ -75,9 +75,9 @@
 
 <body>
   <header>
-    <h1 class="logo">Welcome to BeegoSolution</h1>
+    <h1 class="logo">Welcome to beegoWeb</h1>
     <div class="description">
-      BeegoSolution 是一个关于 Begoo 的 Go 解决方案。  
+      beegoWeb 是一个关于 Begoo 的 Web 解决方案。  
     </div>
   </header>
   <footer>

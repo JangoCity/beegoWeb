@@ -1,0 +1,144 @@
+Searching 729 files for "BeegoSolution"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/README.md:
+    1  ![beego.png](/static/img/beego.png)
+    2  # beegoWeb
+    3: beegoWeb 是一个关于 Begoo 的 Go 解决方案。  
+    4  
+    5  ## 功能特性
+    .
+   43  $ go get github.com/beego/bee
+   44  $ cd $GOPATH/src/
+   45: $ git clone https://github.com/iamwlb/beegoWeb.git
+   46: $ cd beegoWeb
+   47  $ bee run
+   48  $ curl http://localhost:8080
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/routers/router.go:
+    2  
+    3  import (
+    4: 	"BeegoSolution/controllers"
+    5  
+    6  	"github.com/astaxie/beego"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/service/adminService.go:
+    2  
+    3  import (
+    4: 	"BeegoSolution/utils"
+    5  	"database/sql"
+    6  	"fmt"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/service/authorityService.go:
+    4  	"github.com/astaxie/beego"
+    5  
+    6: 	"BeegoSolution/utils"
+    7  	"strconv"
+    8  
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/service/resrouceService.go:
+    2  
+    3  import (
+    4: 	"BeegoSolution/utils"
+    5  	"fmt"
+    6  	"strconv"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/service/roleService.go:
+    2  
+    3  import (
+    4: 	"BeegoSolution/utils"
+    5  	"fmt"
+    6  	"time"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/tests/default_test.go:
+    7  	"runtime"
+    8  	"path/filepath"
+    9: 	_ "BeegoSolution/routers"
+   10  
+   11  	"github.com/astaxie/beego"
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/admin/add.html:
+  115  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+  116  
+  117: 						<h3 class="page-title">BeegoSolution</h3>
+  118  
+  119  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/admin/index.html:
+   89  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+   90  
+   91: 						<h3 class="page-title">BeegoSolution</h3>
+   92  
+   93  						<ul class="breadcrumb">
+   ..
+  124  							<!-- BEGIN PORTLET-->
+  125  
+  126: 							<div class="portlet">欢迎使用BeegoSolution</div>
+  127  
+  128  						</div>
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/admin/list.html:
+   96  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+   97  
+   98: 						<h3 class="page-title">BeegoSolution</h3>
+   99  
+  100  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/authority/roleResource.html:
+  115  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+  116  
+  117: 						<h3 class="page-title">BeegoSolution</h3>
+  118  
+  119  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/authority/userRole.html:
+  115  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+  116  
+  117: 						<h3 class="page-title">BeegoSolution</h3>
+  118  
+  119  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/common/footer.html:
+    6  
+    7  			2013 &copy; Metronic by keenthemes.Collect from <a
+    8: 				href="https://www.wanglibing.com/" title="BeegoSolution" target="_blank">BeegoSolution</a>
+    9  		</div>
+   10  
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/index.tpl:
+   76  <body>
+   77    <header>
+   78:     <h1 class="logo">Welcome to BeegoSolution</h1>
+   79      <div class="description">
+   80:       BeegoSolution 是一个关于 Begoo 的 Go 解决方案。  
+   81      </div>
+   82    </header>
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/resource/add.html:
+  116  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+  117  
+  118: 						<h3 class="page-title">BeegoSolution</h3>
+  119  
+  120  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/resource/index.html:
+   98  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+   99  
+  100: 						<h3 class="page-title">BeegoSolution</h3>
+  101  
+  102  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/role/add.html:
+  115  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+  116  
+  117: 						<h3 class="page-title">BeegoSolution</h3>
+  118  
+  119  						<ul class="breadcrumb">
+
+/Users/iamwlb/Documents/Workspace/go/src/beegoWeb/views/role/index.html:
+   96  						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+   97  
+   98: 						<h3 class="page-title">BeegoSolution</h3>
+   99  
+  100  						<ul class="breadcrumb">
+
+23 matches across 18 files
