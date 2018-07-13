@@ -1,5 +1,5 @@
 ![beego.png](/static/img/beego.png)
-# BegooSolution
+# beegoWeb
 beegoWeb 是一个基于 Begoo 的 Go 语言 Web 解决方案。  
 
 ## 功能特性
@@ -18,7 +18,6 @@ beegoWeb 是一个基于 Begoo 的 Go 语言 Web 解决方案。
 | Beego | 1.9.2 | 
 | dep | v0.4.1 |
 | Metronic | 5.0 | 
-| Swagger | - |
 
 ## 目录说明
 
